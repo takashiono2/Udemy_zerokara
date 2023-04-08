@@ -11,3 +11,8 @@
   width: 200px;
   height: 32px;
 }
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+}

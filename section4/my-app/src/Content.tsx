@@ -1,29 +1,34 @@
 import "./Content.css";
 import Header from "./Header";
-import { useState } from "react";
+import React, { useState } from 'react';
 
 type Props = {
-  user: {
-    name: string,
-    age: number,
-  };
+  user: { name: string; age: number };
 };
 
 const Content = (props: Props) => {
-  const [count, setCount] = useState(0);
-  // let count = 0;
+  const [name, setName] = useState("");
 
-  const onClickPlus = () =>{
-    setCount(count+1);
-    console.log("Plus");
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("onChange",e.target.value);
+    setName(e.target.value);
+  }
+  const onSubmit = () => {
+
   };
 
   return(
     <div>
       <Header></Header>
       <div className="content-body">
-        <span>{count}</span>
-        <button onClick={onClickPlus}>Plus</button>
+        <p>{name}</p>
+        <form className="content-form">
+          <label>Name:</label>
+          <input onChange={(e)=>onChange(e)}></input>
+          <label>Age:</label>
+          <input></input>
+        </form>
+        <button onClick={onSubmit}>Submit</button>
       </div>
     </div>
   );

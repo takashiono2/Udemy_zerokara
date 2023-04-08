@@ -1,0 +1,11 @@
+.header-body {
+  height: 44px;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+}
+
+.header-body span {
+  font-size: 32px;
+  font-weight: bold;
+}
