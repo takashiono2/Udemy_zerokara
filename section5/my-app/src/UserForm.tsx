@@ -1,0 +1,44 @@
+import "./UserForm.css";
+import { useState } from "react";
+
+type Props = {};
+
+const UserForm = (props: Props) => {
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
+
+  const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const onChangeAge = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const age = Number(e.target.value);
+    setAge(age);
+  };
+
+  const onSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+
+    setName("");
+    setAge(0);
+    console.log("onSubmit");
+  };
+
+  console.log("Render");
+
+  return (
+    <div>
+      <div className="content-body">
+        <form className="content-form">
+          <label>Name:</label>
+          <input value={name} onChange={(e) => onChangeName(e)}></input>
+          <label>Age:</label>
+          <input value={age} onChange={(e) => onChangeAge(e)}></input>
+          <button onClick={(e) => onSubmit(e)}>Submit</button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default UserForm;
