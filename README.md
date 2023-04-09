@@ -1,5 +1,9 @@
 # ゼロから学ぶReact.js
-## secition3 Reactの基礎　コンポーネントについて
+
+<details>
+<summary>
+section3 Reactの基礎　コンポーネントについて
+</summary>
 
 | NO | TITLE |
 | --- | ---- |
@@ -13,8 +17,13 @@
 | 28 | Props親コンポーネントから子コンポーネントの値渡し |
 | 29 | 「コンポーネントを組み合わせる」とは |
 | 30 | Propsを変換する |　　　
+</details>
 
-## secition４　Reactの基礎　ステートについて
+<details>
+<summary>
+section4 Reactの基礎　ステートについて
+</summary>
+
 
 | NO | TITLE |
 | --- | ---- |
@@ -26,6 +35,10 @@
 | 36 | コンポーネントの更新のタイミング |
 | 37 | Formの導入 |
 | 38 | 複数ステートを扱う |
-<!--| 33 | 動的なアプリケーションを作る |
-| 26 | イベントの追加 |-->
+| 39 | 以前の状態に基づいたステート更新 |
+| 40 | Form Submission|
+| 41 | 双方向バインディング |
+| 42 | 親から子へのイベント伝播 |
+</details>
+<!--## secition5　StateとComponentについて-->
 

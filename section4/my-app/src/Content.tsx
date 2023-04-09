@@ -8,11 +8,18 @@ type Props = {
 
 const Content = (props: Props) => {
   const [name, setName] = useState("");
-
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("onChange",e.target.value);
+  const [age, setAge] = useState(0);
+  // onChangeNameとonChangeAgeにわける
+  const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("onChangeName",e.target.value);
     setName(e.target.value);
   }
+
+  const onChangeAge = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("onChanegAge",e.target.value);
+    setAge(age);
+  }
+
   const onSubmit = () => {
 
   };
@@ -22,11 +29,12 @@ const Content = (props: Props) => {
       <Header></Header>
       <div className="content-body">
         <p>{name}</p>
+        <p>{age}</p>
         <form className="content-form">
           <label>Name:</label>
-          <input onChange={(e)=>onChange(e)}></input>
+          <input onChange={(e)=>onChangeName(e)}></input>
           <label>Age:</label>
-          <input></input>
+          <input onChange={(e)=>onChangeAge(e)}></input>
         </form>
         <button onClick={onSubmit}>Submit</button>
       </div>
