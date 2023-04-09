@@ -7,12 +7,11 @@ type Props = {
   };
 };
 
-const Footer = (props: Props) => {
-  const month = props.user.createdAt.toLocaleString("ja",{month: "long"});
+const Footer = () => {
+  // const month = props.user.createdAt.toLocaleString("ja",{month: "long"});
   return(
-    <div className="body">
-      <p className="letters">{props.user.name}</p>
-      <p className="letters">{month}</p>
+    <div className="footer-body">
+      <p className="letters">This is footer</p>
     </div>
   );
 };
