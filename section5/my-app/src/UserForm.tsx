@@ -1,7 +1,9 @@
 import "./UserForm.css";
 import { useState } from "react";
 
-type Props = {};
+type Props = {
+  addUser: (user:{ id: string, name: string; age: number }) => void;
+};
 
 const UserForm = (props: Props) => {
   const [name, setName] = useState("");
@@ -19,6 +21,8 @@ const UserForm = (props: Props) => {
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
+    const user = {id: Math.random().toString(),name,age}
+    props.addUser(user);
     setName("");
     setAge(0);
     console.log("onSubmit");
