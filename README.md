@@ -67,7 +67,7 @@ secition6 スタイリングについて深く理解する
 | 51 | cssの動的なスタイリング |
 | 52 | 現在のcssの適用方法の問題点 |
 | 53 | css Module |
-<!-- | 54 | Tailwind css |
+| 54 | Tailwind css |
 | 55 | css ModuleとTailwind css |
 </details>
-->
+<!-- -->
