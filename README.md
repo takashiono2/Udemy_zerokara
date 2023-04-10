@@ -60,7 +60,7 @@ secition5 StateとComponentについて
 <summary>
 secition6 スタイリングについて深く理解する
 </summary>
-
+<!--
 | NO | TITLE |
 | --- | ---- |
 | 50 | 動的なスタイリング |
@@ -70,4 +70,4 @@ secition6 スタイリングについて深く理解する
 | 54 | Tailwind css |
 | 55 | css ModuleとTailwind css |
 </details>
-<!-- -->
+-->
