@@ -11,6 +11,8 @@ const UserList = (props: Props) => {
     setUnder(Number(e.target.value));
   }
 
+  const filteredUsers = props.users.filter((v)=>(v.age > under ));
+
   return (
     <div>
       <select onChange={onChangeSelect}>
@@ -20,15 +22,18 @@ const UserList = (props: Props) => {
         <option value={"40"}>over40</option>
       </select>
       <ul className="user-list-body">
-        { props.users
-        .filter((v)=>(v.age > under))
-        .map((v)=>{
-          return (
-            <li key={v.id}>
-              {v.name} {v.age}
-            </li>
-          );
-        })}
+        {filteredUsers.length <= 0 ? (
+          (<h1>No Users</h1>)
+          ) : (
+          props.users.map((v)=>{
+            return (
+              <li key={v.id}>
+                {v.name} {v.age}
+              </li>
+            );
+          })
+          )
+        }
       </ul>
     </div>
   );
