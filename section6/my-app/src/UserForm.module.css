@@ -1,3 +1,10 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  background-color: rgb(255, 255, 255);
+}
+
 .content-body {
   background-color: rgb(191, 191, 191);
   display: flex;

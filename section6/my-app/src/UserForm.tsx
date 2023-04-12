@@ -1,4 +1,4 @@
-import "./UserForm.css";
+import styles from "./UserForm.module.css";
 import { useState } from "react";
 
 type Props = {
@@ -34,11 +34,11 @@ const UserForm = (props: Props) => {
 
   return (
     <div>
-      <div className="content-body">
-        <form className="content-form">
+      <div className="bg-orange-500 flex flex-col justify-center items-center p-4">
+        <form className={styles["content-form"]}>
           <label>Name:</label>
           <input
-            className={`${isValidName ? "" : "invalid"}`}
+            className={`${!isValidName && styles.invalid}`}
             value={name}
             onChange={(e) => onChangeName(e)}>
           </input>

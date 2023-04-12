@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import { useState } from "react";
 import UserList from "./UserList";
 import UserForm from "./UserForm";
@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="bg-lime-500 flex-col">
       <UserForm addUser={addUser}></UserForm>
       <UserList users={users}></UserList>
     </div>
