@@ -29,6 +29,12 @@
   /* justify-content: center; */
 }
 
+.error-message {
+  font-weight: bold;
+  color: #ff8686;
+  height: 24px;
+}
+
 .content-form .invalid {
   background-color: #ff8686;
 }
