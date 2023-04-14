@@ -75,11 +75,14 @@ secition6 スタイリングについて深く理解する
 <summary>
 secition7 はじめてのアプリケーション実践
 </summary>
-</details>
+
+| NO | TITLE |
+| --- | ---- |
 | 56 | イントロダクション |
 | 57 | フォームを作る |
 | 58 | エラーメッセージを出す |
 | 59 | リストから削除する |
+</details>
 <!--
 <details>
 <summary>
