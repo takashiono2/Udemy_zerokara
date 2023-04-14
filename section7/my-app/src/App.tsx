@@ -15,10 +15,15 @@ function App() {
     setUsers((prevUsers) => [...prevUsers, add]);
   };
 
+  const deleteUser = (deleteId: string) => {
+    setUsers(users.filter(v => v.id !== deleteId));
+    console.log('delete is id:',deleteId)
+  };
+
   return (
     <div className={styles.body}>
       <UserForm addUser={addUser}></UserForm>
-      <UserList users={users}></UserList>
+      <UserList users={users} deleteUser={deleteUser} ></UserList>
     </div>
   );
 }

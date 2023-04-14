@@ -3,6 +3,7 @@ import "./UserList.css";
 
 type Props = {
   users: { id: string; name: string; age: number }[];
+  deleteUser: (deleteid: string) => void ;
 };
 
 const UserList = (props: Props) => {
@@ -12,6 +13,10 @@ const UserList = (props: Props) => {
   };
 
   const filteredUsers = props.users.filter((v) => v.age > under);
+  const onClickDelete = (deleteId: string) => {
+    props.deleteUser(deleteId);
+  };
+
 
   return (
     <div>
@@ -28,6 +33,7 @@ const UserList = (props: Props) => {
           filteredUsers.map((v) => {
             return (
               <li key={v.id}>
+                <button onClick={()=>onClickDelete(v.id)}>DELETE</button>
                 {v.name} {v.age}
               </li>
             );
